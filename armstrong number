@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int po(int , int);
+int main()
+{
+    int temp = 153, n , rem , sum = 0 ;
+    n = temp ;
+    
+    while (n>0)
+    {
+         rem = n % 10 ;
+         sum = sum + po(rem , 3);
+         n = n/10;
+    }
+    
+    if (temp == sum)
+    {
+        printf("%d is an armstrong number" , temp);
+    }
+    
+    else 
+    {
+        printf("%d is not an armstrong" , temp);
+    }
+    
+    
+    return 0;
+}
+
+int po( int a , int b)
+{
+    int power;
+    for (int i = 1 ;i <= b ; i++)
+    {
+        power = a * a *a;
+    }
+  //  printf ("power = %d\n" , power);
+    return power;
+}
