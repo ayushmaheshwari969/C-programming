@@ -8,7 +8,7 @@ int main()
     
   yl = yr%100 != 0 || yr%400 == 0;       //condition for a leap year "DIV BY 400" and "DIV BY 4 BUT NOT DIV BY 100"
     
-    if(yr%4 == 0 || yl){
+    if(yr%4 == 0 && yl){
         printf("%d is a leap year",yr);
     }
     else{
